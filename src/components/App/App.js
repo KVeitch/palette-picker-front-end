@@ -1,12 +1,23 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React, { Component } from 'react';
 import './App.scss';
 
-function App() {
+class App extends Component {
+  constructor() {
+    super()
+    this.state= {
+      user: {},
+      projects: [],
+      currentProjectId: null,
+      palette : {}
+    }
+  }
+
+
+  render = () =>{
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,7 +31,8 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )};
+
 }
 
 
