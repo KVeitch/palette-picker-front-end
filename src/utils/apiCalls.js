@@ -87,3 +87,17 @@ export const deletePalette = async id => {
   const data = response.json();
   return data;
 }
+
+export const updateProject = async (id, update) => {
+  const options = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(update)
+  };
+
+  const response = await fetch(`${baseUrl}/projects/${id}`);
+  const data = response.json();
+  return data;
+}
