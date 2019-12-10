@@ -36,8 +36,6 @@ class App extends Component {
       <ProjectsContainer projects={projects}/> 
     </div>
   )};
-
 }
-
 
 export default App;
