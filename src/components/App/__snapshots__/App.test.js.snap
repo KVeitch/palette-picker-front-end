@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all the data passed in correctly 1`] = `
+<div
+  className="App"
+>
+  <nav>
+    <h1>
+      <span
+        className="page__title"
+      >
+        Some Title
+      </span>
+    </h1>
+        Login
+  </nav>
+  <main>
+    <Color
+      color1="1c6a77"
+      color2="678b91"
+      color3="95e6f4"
+      color4="2dd0ed"
+      main="4fe4ff"
+    />
+    <Color
+      color1="95e6f4"
+      color2="2dd0ed"
+      color3="678b91"
+      color4="4fe4ff"
+      main="1c6a77"
+    />
+    <Color
+      color1="95e6f4"
+      color2="2dd0ed"
+      color3="4fe4ff"
+      color4="1c6a77"
+      main="678b91"
+    />
+    <Color
+      color1="2dd0ed"
+      color2="4fe4ff"
+      color3="1c6a77"
+      color4="678b91"
+      main="95e6f4"
+    />
+    <Color
+      color1="4fe4ff"
+      color2="1c6a77"
+      color3="678b91"
+      color4="95e6f4"
+      main="2dd0ed"
+    />
+  </main>
+  <button
+    onClick=""
+    type="button"
+  >
+    Generate New Palette
+  </button>
+  <InputForm
+    projects={
+      Array [
+        Object {
+          "project_id": 1,
+          "project_name": "Dining Room",
+        },
+      ]
+    }
+  />
+  <ProjectsContainer
+    projects={
+      Array [
+        Object {
+          "project_id": 1,
+          "project_name": "Dining Room",
+        },
+      ]
+    }
+  />
+</div>
+`;
