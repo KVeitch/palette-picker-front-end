@@ -1,0 +1,61 @@
+.outer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.div__color{
+  height:100px;
+  width:100px;
+}
+
+.color1{
+    position: absolute;
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 50%;
+    border-radius: 15px 0 0 0;
+}
+
+.color2{
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 50%;
+  right: 0;
+  border-radius: 0 15px 0 0;
+}
+
+.color3{
+  position: absolute;
+  top: 50%;
+  bottom: 100%;
+  left: 0;
+  right: 50%;
+  border-radius: 0 0 0 15px;
+}
+
+.color4{
+  position: absolute;
+  top: 50%;
+  bottom: 100%;
+  left: 50%;
+  right: 100%;
+  border-radius: 0 0 15px 0;
+}
+
+.div__color--main {
+  height:151px;
+  width: 151px;
+  transform:rotate(45deg);
+  position:absolute;
+  top: 12.5%;
+  right: 12.5%;
+  z-index:5;
+  border-radius: 15px;
+
+  p {
+    transform:rotate(-45deg) translateX(-28%);
+  }
+}
