@@ -7,6 +7,9 @@
 
 .App {
   text-align: center;
+  height:100vh;
+  background-color: #444444;
+  background-image: linear-gradient(300deg, #8e8e8e 0%, #eeeeee 74%);
 }
 
 nav {
@@ -23,6 +26,5 @@ main {
   border-radius: 15px;
   border:solid 1px black;
   margin:5vh 5vw;
-
 
 }
