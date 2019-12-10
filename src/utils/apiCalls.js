@@ -57,3 +57,27 @@ export const postPalette = async (paletteInfo) => {
   const data = response.json();
   return data;
 }
+
+export const deleteProject = async id => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  const response = await fetch(`${baseUrl}/projects/${id}`, options)
+  const data = response.json();
+  return data;
+}
+
+export const deletePalette = async id => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  const response = await fetch(`${baseUrl}/palettes/${id}`, options)
+  const data = response.json();
+  return data;
+}
