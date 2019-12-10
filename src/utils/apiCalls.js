@@ -91,7 +91,7 @@ export const updateProject = async (id, update) => {
     body: JSON.stringify(update)
   };
 
-  const response = await fetch(`${baseUrl}/projects/${id}`);
+  const response = await fetch(`${baseUrl}/projects/${id}`, options);
   const data = response.json();
   return data;
 }
