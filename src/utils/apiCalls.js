@@ -2,9 +2,6 @@ const baseUrl = 'https://api-palette-picker.herokuapp.com/api/v1'
 
 export const getAllPalettes = async () => {
   const response = await fetch(`${baseUrl}/palettes`);
-  if(!response.ok) {
-    console.error('Could not get palettes.')
-  }
   const data = await response.json();
   return data;
 }
@@ -23,9 +20,6 @@ export const getPalettesByColor = async color => {
 
 export const getAllProjects = async () => {
   const response = await fetch(`${baseUrl}/projects`);
-  if(!response.ok) {
-    console.error('Could not get projects.')
-  }
   const data = await response.json();
   return data;
 }
