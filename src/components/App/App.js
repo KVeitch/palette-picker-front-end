@@ -42,7 +42,6 @@ class App extends Component {
   getColors = () => {
     let { color0, color1, color2, color3, color4 } = this.state;
     let colors =[color0, color1, color2, color3, color4];
-    console.log('here=====>',colors)
     colors.forEach(color => {
       if (!color.isLocked) color.hex = this.generateColor(); 
     })
