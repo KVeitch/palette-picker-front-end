@@ -90,7 +90,7 @@ class App extends Component {
         >Generate New Palette</button>
         <InputForm projects={projects}/>
         {/* need function to edit and delete projects and palettes */}
-        <ProjectsContainer projects={projects}/> 
+        <ProjectsContainer projects={projects} key={'projectsContinaer'}/> 
       </div>
     )};
 
