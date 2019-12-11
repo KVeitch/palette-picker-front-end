@@ -4,7 +4,6 @@ import './Project.scss'
 import bin from '../../images/bin.svg'
 
 function Project(props) {
-
   const { palettes, project_name, project_id, removeProject} = props
   const displayPalettes = palettes.map((palette,index) =><Palette palette={palette} key={'palette' + index}/>)
   return (
