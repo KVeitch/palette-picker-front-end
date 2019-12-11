@@ -3,7 +3,7 @@ import './App.scss';
 import Color from '../Color/Color'
 import InputForm from '../InputForm/InputForm'
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-import { getUserProjects, getProjectPaletts, getProjectPalettes } from '../../utils/apiCalls'
+import { getUserProjects, postPalette, postProject, getProjectPalettes } from '../../utils/apiCalls'
 
 class App extends Component {
   constructor() {
