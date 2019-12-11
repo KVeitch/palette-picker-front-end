@@ -5,8 +5,6 @@ import InputForm from '../InputForm/InputForm'
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
 
 
-
-
 class App extends Component {
   constructor() {
     super()
@@ -67,6 +65,12 @@ class App extends Component {
     this.setState({[index]: {hex, isLocked } })
   }
 
+  removeProject = (id) =>{
+    const { projects } = this.state
+    const filteredProjects = projects.filter(project => project.project_id !== id )
+    this.setState({projects:filteredProjects})
+  }
+
   render = () =>{
     const { color0,color1,color2,color3,color4, projects } = this.state;
     const colors = [color0,color1,color2,color3,color4]
@@ -90,7 +94,9 @@ class App extends Component {
         >Generate New Palette</button>
         <InputForm projects={projects} key={'inputForm'}/>
         {/* need function to edit and delete projects and palettes */}
-        <ProjectsContainer projects={projects} key={'projectsContinaer'}/> 
+
+        <ProjectsContainer projects={projects} key={'projectsContinaer'} removeProject={this.removeProject}/> 
+
       </div>
     )};
 

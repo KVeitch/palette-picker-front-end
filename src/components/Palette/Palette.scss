@@ -1,15 +1,21 @@
-.palette__container{
+.palette__container {
   display:flex;
   width:300px;
   justify-content: space-evenly;
-  border:solid 1px gray;
-  padding:2px 5px
+  border:solid 1px rgb(187, 187, 187);
+  padding:2px 10px 2px 5px
 }
-.palette__container--name{
+
+.palette__container:last-child {
+  border-radius:0 0 15px 15px;
+}
+
+.palette__container--name {
   width:100px;
   text-align: left;
   line-height: 30px;
 }
+
 .palette__color{
   height:30px;
   width:30px;
