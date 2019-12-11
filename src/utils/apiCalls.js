@@ -37,6 +37,12 @@ export const getProjectById = async id => {
   return data;
 }
 
+export const getProjectsByUserId = async id => {
+  const response = await fetch(`${baseUrl}/users/${id}/projects`);
+  const data = response.json();
+  return data;
+}
+
 export const postProject = async (projectInfo) => {
   const options = {
     method: 'POST',
