@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color colors locked should match the snapshot with all the data passed in correctly 1`] = `
+<section>
+  <div
+    className="outer"
+  >
+    <div
+      className="div__color color1"
+      style={
+        Object {
+          "backgroundColor": "#1c6a77",
+        }
+      }
+    />
+    <div
+      className="div__color color2"
+      style={
+        Object {
+          "backgroundColor": "#678b91",
+        }
+      }
+    />
+    <div
+      className="div__color color3"
+      style={
+        Object {
+          "backgroundColor": "#95e6f4",
+        }
+      }
+    />
+    <div
+      className="div__color color4"
+      style={
+        Object {
+          "backgroundColor": "#2dd0ed",
+        }
+      }
+    />
+    <div
+      className="div__color--main locked"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4f4f4f",
+        }
+      }
+    >
+      <div
+        className="color__main--info"
+      >
+        <p
+          className="div__p--hexcode"
+        >
+          #
+          4f4f4f
+        </p>
+        <img
+          alt=""
+          className="color__main--lock-img"
+          onClick={[Function]}
+          src="padlock.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <ColorPicker
+    className="chromePicker"
+    color="#4f4f4f"
+    disableAlpha={false}
+    onChangeComplete={[Function]}
+    styles={Object {}}
+    width={225}
+  />
+</section>
+`;
+
+exports[`Color should match the snapshot with all the data passed in correctly 1`] = `
+<section>
+  <div
+    className="outer"
+  >
+    <div
+      className="div__color color1"
+      style={
+        Object {
+          "backgroundColor": "#1c6a77",
+        }
+      }
+    />
+    <div
+      className="div__color color2"
+      style={
+        Object {
+          "backgroundColor": "#678b91",
+        }
+      }
+    />
+    <div
+      className="div__color color3"
+      style={
+        Object {
+          "backgroundColor": "#95e6f4",
+        }
+      }
+    />
+    <div
+      className="div__color color4"
+      style={
+        Object {
+          "backgroundColor": "#2dd0ed",
+        }
+      }
+    />
+    <div
+      className="div__color--main "
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4f4f4f",
+        }
+      }
+    >
+      <div
+        className="color__main--info"
+      >
+        <p
+          className="div__p--hexcode"
+        >
+          #
+          4f4f4f
+        </p>
+        <img
+          alt=""
+          className="color__main--lock-img"
+          onClick={[Function]}
+          src="open-padlock.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <ColorPicker
+    className="chromePicker"
+    color="#4f4f4f"
+    disableAlpha={false}
+    onChangeComplete={[Function]}
+    styles={Object {}}
+    width={225}
+  />
+</section>
+`;
