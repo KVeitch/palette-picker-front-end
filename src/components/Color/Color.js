@@ -26,6 +26,7 @@ const Color = (props) => {
         </div>
       </div>
       <ChromePicker
+        className='chromePicker'
         color={ `#${colors[0].hex}` }
         onChangeComplete={({ hex }) => handleColorChange(index, hex) }
       />
