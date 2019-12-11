@@ -88,7 +88,7 @@ class App extends Component {
         <button type='button' 
         onClick={this.getColors}
         >Generate New Palette</button>
-        <InputForm projects={projects}/>
+        <InputForm projects={projects} key={'inputForm'}/>
         {/* need function to edit and delete projects and palettes */}
         <ProjectsContainer projects={projects} key={'projectsContinaer'}/> 
       </div>

@@ -173,6 +173,7 @@ exports[`App should match the snapshot with all the data passed in correctly 1`]
     Generate New Palette
   </button>
   <InputForm
+    key="inputForm"
     projects={
       Array [
         Object {
