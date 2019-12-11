@@ -77,6 +77,30 @@ class App extends Component {
     this.setState({[index]: {hex, isLocked } })
   }
 
+  addPalette = async (paletteName) => {
+    const newPalette = await postPalette({
+      project_id: this.state.currentProjectId,
+      palette_name: paletteName,
+      color0: this.state.color0,
+      color1: this.state.color1,
+      color2: this.state.color2,
+      color3: this.state.color3,
+      color4: this.state.color4
+    })
+    
+    const currentProject = this.state.projects.find(project => project.project_id === this.state.currentProjectId).push(newPalette)
+    this.setState({ projects: [...this.state.projects, currentProject]})
+  }
+
+  addProject = async (projectName) => {
+    const newProject = await postProject({
+      user_id: this.state.user.id,
+      project_name: projectName
+    })
+
+    this.setState({ projects: [...this.state.projects, newProject]})
+  }
+
   removeProject = (id) =>{
     const { projects } = this.state
     const filteredProjects = projects.filter(project => project.project_id !== id )
@@ -104,10 +128,10 @@ class App extends Component {
         <button type='button' 
         onClick={this.getColors}
         >Generate New Palette</button>
-        <InputForm projects={projects} key={'inputForm'}/>
+        <InputForm projects={projects} key={'inputForm'} addPalette={this.addPalette}/>
         {/* need function to edit and delete projects and palettes */}
 
-         <ProjectsContainer projects={projects} key={'projectsContinaer'} removeProject={this.removeProject}/> 
+        <ProjectsContainer projects={projects} key={'projectsContainer'} removeProject={this.removeProject}/> 
 
       </div>
     )};
