@@ -4,6 +4,9 @@ import Color from '../Color/Color'
 import InputForm from '../InputForm/InputForm'
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
 
+
+
+
 class App extends Component {
   constructor() {
     super()
@@ -11,31 +14,79 @@ class App extends Component {
       user: {},
       projects: [{project_name: 'Dining Room', project_id:1}],
       currentProjectId: null,
-      color0: '0000ff',
-      color1: 'FFFF00',
-      color2: 'FF0000',
-      color3: '00ff00',
-      color4: 'ff00ff'
+      color0: { hex:'4f4f4f', isLocked:false},
+      color1: { hex:'1c6a77', isLocked:false},
+      color2: { hex:'678b91', isLocked:false},
+      color3: { hex:'95e6f4', isLocked:false},
+      color4: { hex:'2dd0ed', isLocked:false}
     }
+  }
+  componentDidMount = () => {
+    this.getStartingColors()
+  }
+
+  generateColor = () => {
+    return Math.floor(Math.random()*16777215).toString(16);
+  }
+
+  getStartingColors = () => {
+    this.setState({
+      color0: { hex:this.generateColor(), isLocked:false},
+      color1: { hex:this.generateColor(), isLocked:false},
+      color2: { hex:this.generateColor(), isLocked:false},
+      color3: { hex:this.generateColor(), isLocked:false},
+      color4: { hex:this.generateColor(), isLocked:false}
+    })
+  }
+
+  getColors = () => {
+    let { color0, color1, color2, color3, color4 } = this.state;
+    let colors =[color0, color1, color2, color3, color4];
+    colors.forEach(color => {
+      if (!color.isLocked) color.hex = this.generateColor(); 
+    })
+    this.setState({color0, color1, color2, color3, color4})
+  }
+
+  handleColorChange = (index, hex) =>{
+    let { isLocked } = this.state[index];
+    this.setState({ [index]: {hex: hex.substring(1), isLocked } })
+  }
+
+  toggleColorLock = (index) => {
+    let { hex, isLocked} = this.state[index];
+    console.log(hex,isLocked, index)
+    isLocked = !isLocked;
+    this.setState({[index]: {hex, isLocked } })
   }
 
   render = () =>{
-  const { color0,color1,color2,color3,color4, projects } = this.state;
-  return (
-    <div className="App">
-      <nav><h1><span className="page__title">Some Title</span></h1>    Login</nav>
-      <main>
-        <Color main={color0} color1={color1} color2={color2} color3={color3} color4={color4}/>
-        <Color main={color1} color1={color2} color2={color3} color3={color4} color4={color0}/>
-        <Color main={color2} color1={color3} color2={color4} color3={color0} color4={color1}/>
-        <Color main={color3} color1={color4} color2={color0} color3={color1} color4={color2}/>
-        <Color main={color4} color1={color0} color2={color1} color3={color2} color4={color3}/>
-      </main>
-      <InputForm projects={projects}/>
-      {/* need function to edit and delete projects and palettes */}
-      <ProjectsContainer projects={projects}/> 
-    </div>
-  )};
+    const { color0,color1,color2,color3,color4, projects } = this.state;
+    const colors = [color0,color1,color2,color3,color4]
+    const displayColors = colors.map((color, i)=>{
+      colors.unshift(...colors.splice(-1));
+      return <Color 
+      colors={[...colors]}
+      key={`color`+i}
+      index={`color${4-i}`}
+      handleColorChange={this.handleColorChange}
+      toggleColorLock={this.toggleColorLock}/>
+    })
+    return (
+      <div className="App">
+        <nav><h1><span className="page__title">Some Title</span></h1>    Login</nav>
+        <main>
+          {displayColors}
+        </main>
+        <button type='button' 
+        onClick={this.getColors}
+        >Generate New Palette</button>
+        <InputForm projects={projects}/>
+        {/* need function to edit and delete projects and palettes */}
+        <ProjectsContainer projects={projects}/> 
+      </div>
+    )};
+
 }
 
 export default App;
