@@ -39,6 +39,10 @@ describe('Color', () => {
     wrapper.find('.div__color--main').simulate('click');
     expect(mockToggleColorLock).toHaveBeenCalledWith(mockIndex);
   })
+  it('should call toggleColorLock when the .color__main--lock-img is clicked',()=> {
+    wrapper.find('.color__main--lock-img').simulate('click');
+    expect(mockToggleColorLock).toHaveBeenCalledWith(mockIndex);
+  })
 
 });
 
