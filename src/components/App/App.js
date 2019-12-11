@@ -3,31 +3,44 @@ import './App.scss';
 import Color from '../Color/Color'
 import InputForm from '../InputForm/InputForm'
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-
+import { getUserProjects, getProjectPaletts, getProjectPalettes } from '../../utils/apiCalls'
 
 class App extends Component {
   constructor() {
     super()
     this.state= {
       user: {id:1, user_name:'Bob'},
-      projects: [{project_name: 'Dining Room', project_id:1, 
-        palettes:[
-          {"id": 1,"palette_name": "Colors","project_id": 1,"color0": "6320ee","color1": "D5f2e3","color2": "999950","color3": "C7B446","color4": "C2B078"},
-          {"id": 2,"palette_name": "Bright","project_id": 1,"color0": "786fa6","color1": "f19066","color2": "FFFF00","color3": "EDFF21","color4": "A98307"},
-          {"id": 3,"palette_name": "Joker","project_id": 1,"color0": "211a1d","color1": "6320ee","color2": "D5f2e3","color3": "8075ff","color4": "8fc93a"},
-          {"id": 4,"palette_name": "Russian Flat","project_id": 1,"color0": "f19066","color1": "786fa6","color2": "f19066","color3": "786fa6","color4": "574b90"},
-          {"id": 5,"palette_name": "For Bill","project_id": 1,"color0": "16a085","color1": "2ecc71","color2": "AEA04B","color3": "E6D690","color4": "CDA434"}
-        ]}],
+      projects:
+      [],
       currentProjectId: null,
       color0: { hex:'4f4f4f', isLocked:false},
       color1: { hex:'1c6a77', isLocked:false},
       color2: { hex:'678b91', isLocked:false},
       color3: { hex:'95e6f4', isLocked:false},
-      color4: { hex:'2dd0ed', isLocked:false}
+      color4: { hex:'2dd0ed', isLocked:false},
     }
   }
-  componentDidMount = () => {
+
+  componentDidMount() {
     this.getStartingColors()
+    this.setUserProjects()
+  }
+
+  setUserProjects = async () => {
+    const {user} = this.state
+    let fechProjects = await getUserProjects(user.id)
+    let userProjects = await Promise.all(fechProjects)
+ 
+    let mappedProjects = userProjects.map(async (project) => {
+ 
+      let fetchedPalletes = await getProjectPalettes(project.id)
+      let cleanedProject = await {...project, palettes:await Promise.all(fetchedPalletes) }
+      return cleanedProject
+    })
+
+    console.log('MAPPEDPROJECTS', mappedProjects)
+    await this.setState({projects:await Promise.all(mappedProjects)})
+
   }
 
   generateColor = () => {
@@ -60,7 +73,6 @@ class App extends Component {
 
   toggleColorLock = (index) => {
     let { hex, isLocked} = this.state[index];
-    console.log(hex,isLocked, index)
     isLocked = !isLocked;
     this.setState({[index]: {hex, isLocked } })
   }
@@ -95,7 +107,7 @@ class App extends Component {
         <InputForm projects={projects} key={'inputForm'}/>
         {/* need function to edit and delete projects and palettes */}
 
-        <ProjectsContainer projects={projects} key={'projectsContinaer'} removeProject={this.removeProject}/> 
+         <ProjectsContainer projects={projects} key={'projectsContinaer'} removeProject={this.removeProject}/> 
 
       </div>
     )};
