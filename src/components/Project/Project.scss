@@ -4,15 +4,19 @@
   margin: 2em 1em;
   width: 300px;
   text-align: left;
-  border: solid 1px white;
+  border: solid 1px gray;
+  padding: 2px 0px 0px 0px;
+
   div{ 
     display:flex;
     justify-content: space-between;
     h3 {
-      display:inline-block
+      display:inline-block;
+      margin:2px;
     }
   }
 }
 .deleteBtn {
   height:25px;
+  margin:2px
 }

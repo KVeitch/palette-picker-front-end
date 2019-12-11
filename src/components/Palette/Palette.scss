@@ -2,11 +2,13 @@
   display:flex;
   width:300px;
   justify-content: space-evenly;
-  border:solid 1px white
+  border:solid 1px gray;
+  padding:2px 5px
 }
 .palette__container--name{
   width:100px;
   text-align: left;
+  line-height: 30px;
 }
 .palette__color{
   height:30px;
