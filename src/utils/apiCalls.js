@@ -16,7 +16,7 @@ export const getPaletteById = async id => {
 }
 
 export const getPalettesByColor = async color => {
-  const response = await fetch(`${baseUrl}/palettes/${color}`);
+  const response = await fetch(`${baseUrl}/palettes/search/${color}`);
   const data = response.json();
   return data;
 }
