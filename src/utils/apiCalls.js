@@ -1,5 +1,6 @@
-const baseUrl = 'https://api-palette-picker.herokuapp.com/api/v1'
 
+// const baseUrl = 'https://api-palette-picker.herokuapp.com/api/v1'
+const baseUrl = 'http://localhost:3000/api/v1'
 export const getAllPalettes = async () => {
   const response = await fetch(`${baseUrl}/palettes`);
   if(!response.ok) {
@@ -99,5 +100,23 @@ export const updateProject = async (id, update) => {
 
   const response = await fetch(`${baseUrl}/projects/${id}`);
   const data = response.json();
+  return data;
+}
+
+export const getUserProjects = async (user_id)=> {
+  const response = await fetch(`${baseUrl}/users/${user_id}/projects`);
+  if(!response.ok) {
+    console.error('Could not get projects.')
+  }
+  const data = await response.json();
+  return data;
+}
+
+export const getProjectPalettes = async (project_id) => {
+  const response = await fetch(`${baseUrl}/projects/${project_id}/palettes`);
+  if(!response.ok) {
+    console.error('Could not get projects.')
+  }
+  const data = await response.json();
   return data;
 }
