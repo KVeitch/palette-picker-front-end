@@ -10,7 +10,7 @@ function Project(props) {
   return (
     <div className="div__project">
       <div>
-        <h3>{project_name}</h3><img className='deleteBtn' src={bin} />
+        <h3>{project_name}</h3><img className='deleteBtn' src={bin} alt='delete button'/>
       </div>
       {displayPalettes}
     </div>
