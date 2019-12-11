@@ -21,18 +21,21 @@ class InputForm extends Component {
     let newPalette = {
       palette_name: this.state.paletteName
     };
-    // this.props.addpalette(newPalette);
+    if (newPalette.palette_name !== '') {
+      this.props.addPalette(newPalette);
+    }
   };
 
   changeProject = e => {
     e.preventDefault();
-    if(e.target.value === 'new-project')
-    {
+    if (e.target.value === 'new-project') {
 
     } else {
-
+      this.setState({
+        currentProject: e.target.value,
+        select: e.target.value
+       })
     }
-
   }
 
   render() {
