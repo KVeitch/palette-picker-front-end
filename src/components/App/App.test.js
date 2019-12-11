@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shallow } from 'enzyme'
 import App from './App';
 
 
 describe('App', () => {
   let wrapper;
+  global.Math.random = jest.spyOn(global.Math, 'random').mockImplementation(() => 0.123)
 
   beforeEach(()=>{
     wrapper = shallow(<App />)
@@ -15,4 +15,7 @@ describe('App', () => {
     wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  
+
 });

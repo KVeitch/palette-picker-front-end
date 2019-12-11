@@ -16,43 +16,158 @@ exports[`App should match the snapshot with all the data passed in correctly 1`]
   </nav>
   <main>
     <Color
-      color1="1c6a77"
-      color2="678b91"
-      color3="95e6f4"
-      color4="2dd0ed"
-      main="4fe4ff"
+      colors={
+        Array [
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+        ]
+      }
+      handleColorChange={[Function]}
+      index="color4"
+      key="color0"
+      toggleColorLock={[Function]}
     />
     <Color
-      color1="95e6f4"
-      color2="2dd0ed"
-      color3="678b91"
-      color4="4fe4ff"
-      main="1c6a77"
+      colors={
+        Array [
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+        ]
+      }
+      handleColorChange={[Function]}
+      index="color3"
+      key="color1"
+      toggleColorLock={[Function]}
     />
     <Color
-      color1="95e6f4"
-      color2="2dd0ed"
-      color3="4fe4ff"
-      color4="1c6a77"
-      main="678b91"
+      colors={
+        Array [
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+        ]
+      }
+      handleColorChange={[Function]}
+      index="color2"
+      key="color2"
+      toggleColorLock={[Function]}
     />
     <Color
-      color1="2dd0ed"
-      color2="4fe4ff"
-      color3="1c6a77"
-      color4="678b91"
-      main="95e6f4"
+      colors={
+        Array [
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+        ]
+      }
+      handleColorChange={[Function]}
+      index="color1"
+      key="color3"
+      toggleColorLock={[Function]}
     />
     <Color
-      color1="4fe4ff"
-      color2="1c6a77"
-      color3="678b91"
-      color4="95e6f4"
-      main="2dd0ed"
+      colors={
+        Array [
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+          Object {
+            "hex": "1f7ced",
+            "isLocked": false,
+          },
+        ]
+      }
+      handleColorChange={[Function]}
+      index="color0"
+      key="color4"
+      toggleColorLock={[Function]}
     />
   </main>
   <button
-    onClick=""
+    onClick={[Function]}
     type="button"
   >
     Generate New Palette
@@ -61,6 +176,58 @@ exports[`App should match the snapshot with all the data passed in correctly 1`]
     projects={
       Array [
         Object {
+          "palettes": Array [
+            Object {
+              "color0": "6320ee",
+              "color1": "D5f2e3",
+              "color2": "999950",
+              "color3": "C7B446",
+              "color4": "C2B078",
+              "id": 1,
+              "palette_name": "Colors",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "786fa6",
+              "color1": "f19066",
+              "color2": "FFFF00",
+              "color3": "EDFF21",
+              "color4": "A98307",
+              "id": 2,
+              "palette_name": "Bright",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "211a1d",
+              "color1": "6320ee",
+              "color2": "D5f2e3",
+              "color3": "8075ff",
+              "color4": "8fc93a",
+              "id": 3,
+              "palette_name": "Joker",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "f19066",
+              "color1": "786fa6",
+              "color2": "f19066",
+              "color3": "786fa6",
+              "color4": "574b90",
+              "id": 4,
+              "palette_name": "Russian Flat",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "16a085",
+              "color1": "2ecc71",
+              "color2": "AEA04B",
+              "color3": "E6D690",
+              "color4": "CDA434",
+              "id": 5,
+              "palette_name": "For Bill",
+              "project_id": 1,
+            },
+          ],
           "project_id": 1,
           "project_name": "Dining Room",
         },
@@ -71,6 +238,58 @@ exports[`App should match the snapshot with all the data passed in correctly 1`]
     projects={
       Array [
         Object {
+          "palettes": Array [
+            Object {
+              "color0": "6320ee",
+              "color1": "D5f2e3",
+              "color2": "999950",
+              "color3": "C7B446",
+              "color4": "C2B078",
+              "id": 1,
+              "palette_name": "Colors",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "786fa6",
+              "color1": "f19066",
+              "color2": "FFFF00",
+              "color3": "EDFF21",
+              "color4": "A98307",
+              "id": 2,
+              "palette_name": "Bright",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "211a1d",
+              "color1": "6320ee",
+              "color2": "D5f2e3",
+              "color3": "8075ff",
+              "color4": "8fc93a",
+              "id": 3,
+              "palette_name": "Joker",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "f19066",
+              "color1": "786fa6",
+              "color2": "f19066",
+              "color3": "786fa6",
+              "color4": "574b90",
+              "id": 4,
+              "palette_name": "Russian Flat",
+              "project_id": 1,
+            },
+            Object {
+              "color0": "16a085",
+              "color1": "2ecc71",
+              "color2": "AEA04B",
+              "color3": "E6D690",
+              "color4": "CDA434",
+              "id": 5,
+              "palette_name": "For Bill",
+              "project_id": 1,
+            },
+          ],
           "project_id": 1,
           "project_name": "Dining Room",
         },
