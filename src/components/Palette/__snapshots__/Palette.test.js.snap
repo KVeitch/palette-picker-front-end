@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Palette should match the snapshot with all the data passed in correctly 1`] = `
+<div
+  className="palette__container"
+>
+  <div
+    className="palette__container--name"
+  >
+    Colors
+  </div>
+  <div
+    className="palette__color"
+    key="div0"
+    style={
+      Object {
+        "backgroundColor": "#6320ee",
+      }
+    }
+  />
+  <div
+    className="palette__color"
+    key="div1"
+    style={
+      Object {
+        "backgroundColor": "#D5f2e3",
+      }
+    }
+  />
+  <div
+    className="palette__color"
+    key="div2"
+    style={
+      Object {
+        "backgroundColor": "#999950",
+      }
+    }
+  />
+  <div
+    className="palette__color"
+    key="div3"
+    style={
+      Object {
+        "backgroundColor": "#C7B446",
+      }
+    }
+  />
+  <div
+    className="palette__color"
+    key="div4"
+    style={
+      Object {
+        "backgroundColor": "#C2B078",
+      }
+    }
+  />
+</div>
+`;
