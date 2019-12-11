@@ -77,28 +77,35 @@ class App extends Component {
     this.setState({[index]: {hex, isLocked } })
   }
 
-  addPalette = async (paletteName) => {
-    const newPalette = await postPalette({
-      project_id: this.state.currentProjectId,
-      palette_name: paletteName,
-      color0: this.state.color0,
-      color1: this.state.color1,
-      color2: this.state.color2,
-      color3: this.state.color3,
-      color4: this.state.color4
-    })
-    
-    const currentProject = this.state.projects.find(project => project.project_id === this.state.currentProjectId).push(newPalette)
-    this.setState({ projects: [...this.state.projects, currentProject]})
+  setCurrentProject = (projectName) => {
+    const currentProject = this.state.projects.find(project => project.project_name === projectName);
+    this.setState({ currentProjectId: currentProject.project_id });
   }
 
+  getUserProjects = async id => {
+    const newProjects = await getProjectsByUserId(id);
+    this.setState({ projects: newProjects });
+  }
+
+  addPalette = async (paletteName) => {
+    await postPalette({
+      project_id: this.state.currentProjectId,
+      palette_name: paletteName,
+      color0: this.state.color0.hex,
+      color1: this.state.color1.hex,
+      color2: this.state.color2.hex,
+      color3: this.state.color3.hex,
+      color4: this.state.color4.hex
+    });
+    this.getUserProjects(this.state.user.id)
+  };
+
   addProject = async (projectName) => {
-    const newProject = await postProject({
+    await postProject({
       user_id: this.state.user.id,
       project_name: projectName
     })
-
-    this.setState({ projects: [...this.state.projects, newProject]})
+    this.getUserProjects(this.state.user.id)
   }
 
   removeProject = (id) =>{
@@ -128,7 +135,7 @@ class App extends Component {
         <button type='button' 
         onClick={this.getColors}
         >Generate New Palette</button>
-        <InputForm projects={projects} key={'inputForm'} addPalette={this.addPalette}/>
+        <InputForm projects={projects} key={'inputForm'} addPalette={this.addPalette} setCurrentProject={this.setCurrentProject}/>
         {/* need function to edit and delete projects and palettes */}
 
         <ProjectsContainer projects={projects} key={'projectsContainer'} removeProject={this.removeProject}/> 
