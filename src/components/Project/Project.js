@@ -5,12 +5,12 @@ import bin from '../../images/bin.svg'
 
 function Project(props) {
 
-  const { palettes, project_name} = props
+  const { palettes, project_name, project_id, removeProject} = props
   const displayPalettes = palettes.map((palette,index) =><Palette palette={palette} key={'palette' + index}/>)
   return (
     <div className="div__project">
       <div>
-        <h3>{project_name}</h3><img className='deleteBtn' src={bin} alt='delete button'/>
+        <h3>{project_name}</h3><img className='deleteBtn' src={bin} alt='delete button' onClick={()=>removeProject(project_id)}/>
       </div>
       {displayPalettes}
     </div>
