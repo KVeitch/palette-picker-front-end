@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './InputForm.scss';
 
-
 class InputForm extends Component {
   constructor() {
     super();
@@ -52,6 +51,7 @@ class InputForm extends Component {
           </select>
 
         <input
+          className='input__palette-name'
           type='text'
           placeholder='Palette Name'
           name='paletteName'

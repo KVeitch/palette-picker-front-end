@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputForm should match the snapshot with all the data passed in correctly 1`] = `
+<form
+  className="main__form"
+>
+  <select
+    className="select-project"
+    onChange={[Function]}
+    value="newProject"
+  >
+    <option
+      value="new-project"
+    >
+      Create A New Project
+    </option>
+    <option
+      value="Dining Room"
+    >
+      Dining Room
+    </option>
+  </select>
+  <input
+    className="input__palette-name"
+    name="paletteName"
+    onChange={[Function]}
+    placeholder="Palette Name"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Save a palette
+  </button>
+</form>
+`;
