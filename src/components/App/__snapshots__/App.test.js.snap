@@ -235,6 +235,7 @@ exports[`App should match the snapshot with all the data passed in correctly 1`]
     }
   />
   <ProjectsContainer
+    key="projectsContinaer"
     projects={
       Array [
         Object {
