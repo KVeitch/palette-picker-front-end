@@ -13,7 +13,7 @@ class InputForm extends Component {
     };
   }
 
-  handlePaletteChange = e => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -47,20 +47,28 @@ class InputForm extends Component {
           value={select}
           onChange={this.changeProject}
         >
-            <option value="new-project">Create A New Project</option>
-            {options}
-          </select>
-
+          <option value="new-project">Create A New Project</option>
+          {options}
+        </select>
+        <input
+          className='input__project-name'
+          type='text'
+          placeholder='Project Name'
+          name='projectName'
+          value={this.state.projectName}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleProjectClick}>Save New Project</button>
         <input
           className='input__palette-name'
           type='text'
           placeholder='Palette Name'
           name='paletteName'
           value={this.state.paletteName}
-          onChange={this.handlePaletteChange}
+          onChange={this.handleChange}
         />
 
-        <button onClick={this.handlePaletteClick}>Save a palette</button>
+        <button onClick={this.handlePaletteClick}>Save Palette</button>
       </form>
     );
   }
