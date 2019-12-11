@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './InputForm.scss';
+import { postPalette, postProject } from '../../utils/apiCalls';
 
 class InputForm extends Component {
   constructor() {
