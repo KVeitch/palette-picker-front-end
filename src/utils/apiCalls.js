@@ -37,12 +37,6 @@ export const getProjectById = async id => {
   return data;
 }
 
-export const getProjectsByUserId = async id => {
-  const response = await fetch(`${baseUrl}/users/${id}/projects`);
-  const data = response.json();
-  return data;
-}
-
 export const postProject = async (projectInfo) => {
   const options = {
     method: 'POST',
@@ -104,25 +98,19 @@ export const updateProject = async (id, update) => {
     body: JSON.stringify(update)
   };
 
-  const response = await fetch(`${baseUrl}/projects/${id}`);
+  const response = await fetch(`${baseUrl}/projects/${id}`, options);
   const data = response.json();
   return data;
 }
 
 export const getUserProjects = async (user_id)=> {
   const response = await fetch(`${baseUrl}/users/${user_id}/projects`);
-  if(!response.ok) {
-    console.error('Could not get projects.')
-  }
   const data = await response.json();
   return data;
 }
 
 export const getProjectPalettes = async (project_id) => {
   const response = await fetch(`${baseUrl}/projects/${project_id}/palettes`);
-  if(!response.ok) {
-    console.error('Could not get projects.')
-  }
   const data = await response.json();
   return data;
 }
