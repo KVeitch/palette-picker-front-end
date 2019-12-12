@@ -13,6 +13,10 @@ Palette Picker helps you to come up with the right color palette for whatever yo
 
 We created Palette Picker during our fourth module at the Turing School of Software and Design. It was a two-week partner project. 
 
+[Project Storyboard](https://github.com/users/KVeitch/projects/4)
+
+[Initial wireframes](./DOCS/PalettePicker.pdf)
+
 This is the repository for the Palette Picker front end. For the front-end repo, please visit https://github.com/KVeitch/palette-picker-back-end.
 
 ## Technology / Libraries 
@@ -37,5 +41,3 @@ This is the repository for the Palette Picker front end. For the front-end repo,
 ![](/DOCS/screenCap1.png)
 ![](/DOCS/screenCap2.png)
 ![](/DOCS/screenCap3.png)
-
-[Project Storyboard](https://github.com/users/KVeitch/projects/4)
