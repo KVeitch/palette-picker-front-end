@@ -68,7 +68,7 @@ exports[`Color colors locked should match the snapshot with all the data passed 
     className="chromePicker"
     color="#4f4f4f"
     disableAlpha={false}
-    onChangeComplete={[Function]}
+    onChange={[Function]}
     styles={Object {}}
     width={225}
   />
@@ -143,7 +143,7 @@ exports[`Color should match the snapshot with all the data passed in correctly 1
     className="chromePicker"
     color="#4f4f4f"
     disableAlpha={false}
-    onChangeComplete={[Function]}
+    onChange={[Function]}
     styles={Object {}}
     width={225}
   />

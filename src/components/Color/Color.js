@@ -46,7 +46,7 @@ const Color = props => {
       <ChromePicker
         className='chromePicker'
         color={`#${colors[0].hex}`}
-        onChangeComplete={({ hex }) => handleColorChange(index, hex)}
+        onChange={({ hex }) => handleColorChange(index, hex)}
       />
     </section>
   );

@@ -32,7 +32,7 @@ describe('Color', () => {
 
   it('should call handleColorChange when the color changers', () => {
     let color = { hex: '123123' };
-    wrapper.find('.chromePicker').simulate('changeComplete', color);
+    wrapper.find('.chromePicker').simulate('change', color);
     expect(mockHandleColorChange).toHaveBeenCalledWith(mockIndex, '123123');
   });
 
