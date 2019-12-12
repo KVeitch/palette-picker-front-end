@@ -26,6 +26,16 @@ class InputForm extends Component {
     }
   };
 
+  handleProjectClick = e => {
+    e.preventDefault();
+    let newProject = {
+      project_name: this.state.projectName
+    };
+    if (newProject.project_name !== '') {
+      this.props.addProject(this.state.projectName);
+    }
+  };
+
   changeProject = async e => {
     e.preventDefault();
     if (e.target.value === 'new-project') {
