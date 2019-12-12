@@ -8,7 +8,7 @@ class InputForm extends Component {
       paletteName: '',
       projectName: '',
       select: 'new-project',
-      currentProject:''      
+      currentProject: ''
     };
   }
 
@@ -33,27 +33,30 @@ class InputForm extends Component {
     };
     if (newProject.project_name !== '') {
       this.props.addProject(this.state.projectName);
-      this.setState({select: this.state.projectName })
-      
+      this.setState({ select: this.state.projectName });
     }
   };
 
   changeProject = async e => {
     e.preventDefault();
     if (e.target.value === 'new-project') {
-      this.setState({select: e.target.value });
+      this.setState({ select: e.target.value });
       // this.props.setCurrentProject(e.target.value)
     } else {
-      this.setState({select: e.target.value });
-      this.props.setCurrentProject(e.target.value)
+      this.setState({ select: e.target.value });
+      this.props.setCurrentProject(e.target.value);
     }
-  }
+  };
 
   render() {
-    const { projects } = this.props
-    const { select } = this.state
+    const { projects } = this.props;
+    const { select } = this.state;
 
-    const options = projects.map(project => <option key={'option'+project.id} value={project.project_name}>{project.project_name}</option>)
+    const options = projects.map(project => (
+      <option key={'option' + project.id} value={project.project_name}>
+        {project.project_name}
+      </option>
+    ));
     return (
       <form className='main__form'>
         <select
@@ -93,6 +96,5 @@ class InputForm extends Component {
     );
   }
 }
-
 
 export default InputForm;
