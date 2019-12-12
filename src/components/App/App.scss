@@ -13,6 +13,18 @@ body{
 
 .App {
   text-align: center;
+  & > button{
+    color:white;
+    background: #307ced;
+    cursor: pointer;
+    height:2.2em;
+    width:12em;
+    text-overflow:ellipsis;
+    font-size: 1.3em;
+    text-align: center;
+    margin:0px 0px;
+    border-radius:15px;
+  }
 }
 
 nav {
