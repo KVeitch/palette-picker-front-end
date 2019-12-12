@@ -7,7 +7,7 @@ exports[`InputForm should match the snapshot with all the data passed in correct
   <select
     className="select-project"
     onChange={[Function]}
-    value="newProject"
+    value="new-project"
   >
     <option
       value="new-project"
@@ -15,11 +15,29 @@ exports[`InputForm should match the snapshot with all the data passed in correct
       Create A New Project
     </option>
     <option
+      key="optionundefined"
       value="Dining Room"
     >
       Dining Room
     </option>
   </select>
+  <div
+    className="form__input--new-project-name"
+  >
+    <input
+      className="input__project-name"
+      name="projectName"
+      onChange={[Function]}
+      placeholder="Project Name"
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Save New Project
+    </button>
+  </div>
   <input
     className="input__palette-name"
     name="paletteName"
@@ -31,7 +49,61 @@ exports[`InputForm should match the snapshot with all the data passed in correct
   <button
     onClick={[Function]}
   >
-    Save a palette
+    Save Palette
+  </button>
+</form>
+`;
+
+exports[`InputForm with select = ProjectName  should match the snapshot with all the data passed in correctly 1`] = `
+<form
+  className="main__form"
+>
+  <select
+    className="select-project"
+    onChange={[Function]}
+    value="new-project"
+  >
+    <option
+      value="new-project"
+    >
+      Create A New Project
+    </option>
+    <option
+      key="optionundefined"
+      value="Dining Room"
+    >
+      Dining Room
+    </option>
+  </select>
+  <div
+    className="form__input--new-project-name"
+  >
+    <input
+      className="input__project-name"
+      name="projectName"
+      onChange={[Function]}
+      placeholder="Project Name"
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Save New Project
+    </button>
+  </div>
+  <input
+    className="input__palette-name"
+    name="paletteName"
+    onChange={[Function]}
+    placeholder="Palette Name"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Save Palette
   </button>
 </form>
 `;

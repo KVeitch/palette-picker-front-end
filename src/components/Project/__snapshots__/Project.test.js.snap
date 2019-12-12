@@ -11,6 +11,7 @@ exports[`Project should match the snapshot with all the data passed in correctly
     <img
       alt="delete button"
       className="deleteBtn"
+      onClick={[Function]}
       src="bin.svg"
     />
   </div>
