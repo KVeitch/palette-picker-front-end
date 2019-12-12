@@ -3,7 +3,7 @@ import './App.scss';
 import Color from '../Color/Color'
 import InputForm from '../InputForm/InputForm'
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer'
-import { getUserProjects, postPalette, postProject, getProjectPalettes } from '../../utils/apiCalls'
+import { getUserProjects, postPalette, postProject, getProjectPalettes, deleteProject} from '../../utils/apiCalls'
 
 class App extends Component {
   constructor() {
@@ -113,6 +113,8 @@ class App extends Component {
     const { projects } = this.state
     const filteredProjects = projects.filter(project => project.id !== id )
     this.setState({projects:filteredProjects})
+    deleteProject(id)
+
   }
 
   render = () =>{
@@ -129,7 +131,7 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <nav><h1><span className="page__title">Some Title</span></h1>    Login</nav>
+        <nav><h1><span className="page__title">Picker of Palettes</span></h1>    <span></span></nav>
         <main>
           {displayColors}
         </main>

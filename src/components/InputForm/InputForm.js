@@ -7,7 +7,7 @@ class InputForm extends Component {
     this.state = {
       paletteName: '',
       projectName: '',
-      select: 'newProject',
+      select: 'new-project',
       currentProject:''      
     };
   }
@@ -33,17 +33,18 @@ class InputForm extends Component {
     };
     if (newProject.project_name !== '') {
       this.props.addProject(this.state.projectName);
+      this.setState({select: this.state.projectName })
+      
     }
   };
 
   changeProject = async e => {
     e.preventDefault();
     if (e.target.value === 'new-project') {
-
+      this.setState({select: e.target.value });
+      // this.props.setCurrentProject(e.target.value)
     } else {
-      this.setState({
-        select: e.target.value
-      })
+      this.setState({select: e.target.value });
       this.props.setCurrentProject(e.target.value)
     }
   }
@@ -51,26 +52,33 @@ class InputForm extends Component {
   render() {
     const { projects } = this.props
     const { select } = this.state
-    const options = projects.map(project => <option key={project.id} value={project.project_name}>{project.project_name}</option>)
+
+    const options = projects.map(project => <option key={'option'+project.id} value={project.project_name}>{project.project_name}</option>)
     return (
       <form className='main__form'>
         <select
-          className="select-project"
+          className='select-project'
           value={select}
           onChange={this.changeProject}
         >
-          <option value="new-project">Create A New Project</option>
+          <option value='new-project'>Create A New Project</option>
           {options}
         </select>
-        <input
-          className='input__project-name'
-          type='text'
-          placeholder='Project Name'
-          name='projectName'
-          value={this.state.projectName}
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleProjectClick}>Save New Project</button>
+        {select === 'new-project' ? (
+          <div className='form__input--new-project-name'>
+            <input
+              className='input__project-name'
+              type='text'
+              placeholder='Project Name'
+              name='projectName'
+              value={this.state.projectName}
+              onChange={this.handleChange}
+            />
+            <button onClick={this.handleProjectClick}>Save New Project</button>
+          </div>
+        ) : (
+          ''
+        )}
         <input
           className='input__palette-name'
           type='text'
