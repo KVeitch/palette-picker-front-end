@@ -114,7 +114,7 @@ class App extends Component {
     this.setUserProjects();
   };
 
-  removeProject = id => {
+  removeProject = async id => {
     const { projects } = this.state;
     const filteredProjects = projects.filter(project => project.id !== id);
     this.setState({ projects: filteredProjects });

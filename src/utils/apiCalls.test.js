@@ -31,8 +31,6 @@ describe('getAllPalettes', () => {
     const response = await getAllPalettes();
     expect(response).toEqual(palettes);
   });
-
-  it.skip('should SAD', () => {});
 });
 
 describe('getPaletteById', () => {
@@ -97,12 +95,11 @@ describe('getAllProjects', () => {
     getAllProjects();
     expect(window.fetch).toHaveBeenCalledWith(url);
   });
+
   it('should return an array of all of the projects HAPPY', async () => {
     const results = await getAllProjects();
     expect(results).toEqual(projects);
   });
-
-  it.skip('should SAD', () => {});
 });
 
 describe('getProjectById', () => {
@@ -125,8 +122,6 @@ describe('getProjectById', () => {
     const results = await getProjectById(1);
     expect(results).toEqual(projects[0]);
   });
-
-  it.skip('should SAD', () => {});
 });
 
 describe('postProject', () => {
@@ -153,7 +148,6 @@ describe('postProject', () => {
   });
 
   it.skip('should add a project to the database HAPPY', () => {});
-  it.skip('should SAD', () => {});
 });
 
 describe('postPalette', () => {
@@ -178,8 +172,6 @@ describe('postPalette', () => {
     expect(window.fetch).toHaveBeenCalledWith(url, options);
   });
   it.skip('should add a palette to the database HAPPY', () => {});
-
-  it.skip('should SAD', () => {});
 });
 
 describe('deleteProject', () => {
@@ -205,7 +197,6 @@ describe('deleteProject', () => {
   });
 
   it.skip('should remove a project from the database HAPPY', () => {});
-  it.skip('should SAD', () => {});
 });
 
 describe('deletePalette', () => {
@@ -229,9 +220,6 @@ describe('deletePalette', () => {
     deletePalette(1);
     expect(window.fetch).toHaveBeenCalledWith(url, options);
   });
-
-  it.skip('should HAPPY', () => {});
-  it.skip('should SAD', () => {});
 });
 
 describe('updateProject', () => {
@@ -255,10 +243,8 @@ describe('updateProject', () => {
       body: JSON.stringify(update)
     };
     updateProject(1, update);
-    expect(window.fetch).toHaveBeenCalledWith(url);
+    expect(window.fetch).toHaveBeenCalledWith(url, options);
   });
-  it.skip('should HAPPY', () => {});
-  it.skip('should SAD', () => {});
 });
 
 // Data for Test
