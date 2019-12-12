@@ -1,45 +1,42 @@
 * {
-  // border: solid 1px red;
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
+body {
   background-color: #ffffff;
-  // background-image: linear-gradient(300deg, #8e8e8e 0%, #eeeeee 74%);
-  height:100vh
+  background-image: linear-gradient(300deg, #8e8e8e 0%, #eeeeee 74%);
+  height: 100vh;
 }
 
 .App {
   text-align: center;
-  & > button{
-    color:white;
+  & > button {
+    color: white;
     background: #307ced;
     cursor: pointer;
-    height:2.2em;
-    width:12em;
-    text-overflow:ellipsis;
+    height: 2.2em;
+    width: 12em;
+    text-overflow: ellipsis;
     font-size: 1.3em;
     text-align: center;
-    margin:0px 0px;
-    border-radius:15px;
+    margin: 0px 0px;
+    border-radius: 15px;
   }
 }
 
 nav {
   height: 5vh;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
 main {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  padding:20px;
+  padding: 20px;
   border-radius: 15px;
-  border:solid 1px black;
-  margin:2vh 5vw;
-
+  border: solid 1px black;
+  margin: 2vh 5vw;
 }

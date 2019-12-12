@@ -60,9 +60,15 @@ describe('Project', () => {
       }
     ]
   };
-  const {palettes, project_name} = mockProject;
+  const { palettes, project_name } = mockProject;
   beforeEach(() => {
-    wrapper = shallow(<Project key={'Project'+1} palettes={palettes} project_name={project_name} />);
+    wrapper = shallow(
+      <Project
+        key={'Project' + 1}
+        palettes={palettes}
+        project_name={project_name}
+      />
+    );
   });
 
   it('should match the snapshot with all the data passed in correctly', () => {

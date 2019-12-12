@@ -1,37 +1,36 @@
-
-
-
-button, .select-project, input{
-  height:2em;
-  width:10em;
-  text-overflow:ellipsis;
+button,
+.select-project,
+input {
+  height: 2em;
+  width: 10em;
+  text-overflow: ellipsis;
   font-size: 1.2em;
   text-align: center;
-  margin:20px 10px;
-  border-radius:15px;
+  margin: 20px 10px;
+  border-radius: 15px;
 }
-.select-project{
-  width:12em
+.select-project {
+  width: 12em;
 }
 .main__form {
-  display:flex;
+  display: flex;
   justify-content: space-around;
-  & button{
-    color:white;
+  & button {
+    color: white;
     background: #307ced;
     cursor: pointer;
   }
   & .form__input--new-project-name {
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
 }
 
 button:hover {
   background: #ed3330;
-  color:black;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  color: black;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s;
 }
