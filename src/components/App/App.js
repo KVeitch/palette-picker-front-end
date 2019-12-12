@@ -111,7 +111,7 @@ class App extends Component {
 
   removeProject = (id) =>{
     const { projects } = this.state
-    const filteredProjects = projects.filter(project => project.project_id !== id )
+    const filteredProjects = projects.filter(project => project.id !== id )
     this.setState({projects:filteredProjects})
   }
 
