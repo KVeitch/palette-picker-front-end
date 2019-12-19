@@ -1,5 +1,4 @@
-const baseUrl = 'https://api-palette-picker.herokuapp.com/api/v1'
-// const baseUrl = 'http://localhost:3000/api/v1';
+const baseUrl = `${process.env.REACT_APP_PALETTE_PICKER_BACK_END_URL}`
 export const getAllPalettes = async () => {
   const response = await fetch(`${baseUrl}/palettes`);
   if (!response.ok) {
