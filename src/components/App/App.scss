@@ -6,7 +6,7 @@
 
 body {
   background-color: #ffffff;
-  background-image: linear-gradient(300deg, #8e8e8e 0%, #eeeeee 74%);
+  // background-image: linear-gradient(300deg, #8e8e8e 0%, #eeeeee 74%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
@@ -24,7 +24,7 @@ body {
     font-size: 1.3em;
     text-align: center;
     margin: 0px 0px;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 }
 
@@ -39,8 +39,8 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-radius: 15px;
-  border: solid 1px black;
+  border-radius: 5px;
+  border: solid 1px #eeeeee;
   margin: 2vh 5vw;
   background: white
 }

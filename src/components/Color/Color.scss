@@ -16,7 +16,7 @@
   bottom: 50%;
   left: 0;
   right: 50%;
-  border-radius: 15px 0 0 0;
+  border-radius: 5px 0 0 0;
 }
 
 .color2 {
@@ -25,7 +25,7 @@
   bottom: 50%;
   left: 50%;
   right: 0;
-  border-radius: 0 15px 0 0;
+  border-radius: 0 5px 0 0;
 }
 
 .color3 {
@@ -34,7 +34,7 @@
   bottom: 100%;
   left: 0;
   right: 50%;
-  border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 5px;
 }
 
 .color4 {
@@ -43,7 +43,7 @@
   bottom: 100%;
   left: 50%;
   right: 100%;
-  border-radius: 0 0 15px 0;
+  border-radius: 0 0 5px 0;
 }
 
 .div__color--main {
@@ -53,7 +53,7 @@
   top: 4.8%;
   right: 4.8%;
   z-index: 5;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
 
