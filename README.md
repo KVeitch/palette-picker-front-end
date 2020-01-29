@@ -39,7 +39,7 @@ This is the repository for the Palette Picker front end. For the front-end repo,
 ### Screenshots
 
 
-![](/DOCS/screenCap.png)
+![](/DOCS/screencap.png)
 ![](/DOCS/screenCap1.png)
 ![](/DOCS/screenCap2.png)
 ![](/DOCS/screenCap3.png)
